@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    margin: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* === NEW STYLES FOR INVASIVE PLANTS SECTION === */
+
+.invasive-plant {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.invasive-plant img {
+    width: 350px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.invasive-plant .plant-text {
+    max-width: 700px;
+}
+
+.invasive-plant h2 {
+    margin-top: 0;
+}
+
+
+/* === NEW STYLES FOR WEED SECTION === */
+
+.weeds {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.weeds img {
+    width: 350px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.weeds .plant-text {
+    max-width: 700px;
+}
+
+.weeds h2 {
+    margin-top: 0;
+}
+
+
+/* === NEW STYLES FOR PLANTS SECTION === */
+
+.plants {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.plants img {
+    width: 350px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.plants .plant-text {
+    max-width: 700px;
+}
+
+.plants h2 {
+    margin-top: 0;
+}

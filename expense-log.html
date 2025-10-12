@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Garden Expense Log</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Garden Expense Log</h1>
+  <a href="index.html">Back to Home</a>
+
+  <form id="expenseForm">
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br>
+
+    <label for="area">Garden Area:</label>
+    <select id="area" name="area">
+      <option value="Lower Drive and Shed">Lower Drive and Shed</option>
+      <option value="Swimming Pool">Swimming Pool</option>
+      <option value="Main Border">Main Border</option>
+      <option value="Kitchen Courtyard">Kitchen Courtyard</option>
+      <option value="Top Lawn">Top Lawn</option>
+    </select><br>
+
+    <label for="item">Item:</label>
+    <input type="text" id="item" name="item" required><br>
+
+    <label for="amount">Amount (£):</label>
+    <input type="number" step="0.01" id="amount" name="amount" required><br>
+
+    <label for="supplier">Supplier:</label>
+    <select id="supplier" name="supplier">
+      <option value="Garden Center">Garden Center</option>
+      <option value="DIY Shop">DIY Shop</option>
+      <option value="Other">Other</option>
+    </select><br>
+
+    <label for="comment">Comment (max 50 chars):</label>
+    <input type="text" id="comment" name="comment" maxlength="50"><br>
+
+    <input type="submit" value="Log Expense">
+  </form>
+
+  <h2>Expense Logs</h2>
+  <table id="logTable">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Area</th>
+        <th>Item</th>
+        <th>Amount (£)</th>
+        <th>Supplier</th>
+        <th>Comment</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <button onclick="downloadLog()">Download CSV</button>
+
+  <script>
+    const form = document.getElementById('expenseForm');
+    const tableBody = document.querySelector('#logTable tbody');
+    const logs = [];
+
+    function formatDateToDDMMYYYY(isoDate) {
+      const [year, month, day] = isoDate.split('-');
+      return `${day}-${month}-${year}`;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const date = document.getElementById('date').value;
+      const area = document.getElementById('area').value;
+      const item = document.getElementById('item').value;
+      const amount = document.getElementById('amount').value;
+      const supplier = document.getElementById('supplier').value;
+      const comment = document.getElementById('comment').value;
+
+      const formattedDate = formatDateToDDMMYYYY(date);
+      const rowData = [formattedDate, area, item, amount, supplier, comment];
+      logs.push(rowData);
+
+      const row = tableBody.insertRow();
+      rowData.forEach(text => {
+        const cell = row.insertCell();
+        cell.textContent = text;
+      });
+
+      form.reset();
+    });
+
+    function downloadLog() {
+      if (logs.length === 0) {
+        alert('No expenses to download.');
+        return;
+      }
+
+      const today = new Date();
+      const fileDate = `${String(today.getDate()).padStart(2, '0')}-${String(today.getMonth() + 1).padStart(2, '0')}-${today.getFullYear()}`;
+      const fileName = `expense-log-${fileDate}.csv`;
+
+      let csvContent = "Date,Area,Item,Amount (£),Supplier,Comment\n" + logs.map(row => row.join(",")).join("\n");
+
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      const link = document.createElement("a");
+      link.setAttribute("href", URL.createObjectURL(blob));
+      link.setAttribute("download", fileName);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
