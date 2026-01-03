@@ -78,6 +78,7 @@ foreach ($entries as $e) {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expenses - Montrose Garden</title>
   <link rel="stylesheet" href="styles.css">
   <style>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Montrose Garden - Home</title>
   <meta name="description" content="Tracking my garden renovation and plant collection at Montrose. Browse garden sections and view garden records." />
   <link rel="stylesheet" href="styles.css">
