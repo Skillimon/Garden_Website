@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invasive Plants - Montrose Garden</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <a class="site-title" href="index.html">Montrose Garden</a>
+        <p class="site-tag">Garden renovation & plant records</p>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="menu-icon">☰</span> Menu
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="upper_drive.html">Upper Drive</a></li>
+          <li><a href="lower_drive.html">Lower Drive</a></li>
+          <li><a href="swimming_pool.html">Swimming Pool</a></li>
+          <li><a href="kitchen_steps.html">Kitchen Courtyard</a></li>
+          <li><a href="container_plants.html">Container Plants</a></li>
+          <li><a href="top_lawn.html">Top Lawn</a></li>
+          <li><a href="weeds.html">Weeds</a></li>
+          <li><a href="invasive_plants.html">Invasive Plants</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+  <h1>Invasive Plants</h1>
+  <a href="index.html">Back to Home</a>
+
+  <div class="invasive-plant">
+    <img src="Invasive Plants/bamboo.jpg" alt="Bamboo">
+    <div class="plant-text">
+      <h2>Bamboo</h2>
+      <p><strong>Nature:</strong> Green leaves shaped like a lance or spear that taper to a point. Stem/culm rounded and thick. Tallest bamboo can grow up to 40 metres.</p>
+      <p><strong>How it spreads:</strong> Via shallow rhizomes (runners).</p>
+      <p><strong>Treatment:</strong> To get rid of bamboo, the most effective method is to dig up the entire root system (rhizomes) and canes, making sure to remove all fragments to prevent regrowth.</p>
+    </div>
+  </div>
+
+  <div class="invasive-plant">
+    <img src="Invasive Plants/crocos.jpg" alt="Montbretia Crocosmia x Crocosmiiflora">
+    <div class="plant-text">
+      <h2>Montbretia (Crocosmia x Crocosmiiflora)</h2>
+      <p><strong>Nature:</strong> Grass-like leaves, bright orange flowers.</p>
+      <p><strong>How it spreads:</strong> Although it produces seeds, most reproduction is vegetative.</p>
+      <p><strong>Treatment:</strong> Persistent digging or systemic weed killer.</p>
+    </div>
+  </div>
+
+  <div class="invasive-plant">
+    <img src="Invasive Plants/cotoneaster.jpg" alt="Cotoneaster">
+    <div class="plant-text">
+      <h2>Cotoneaster</h2>
+      <p><strong>Nature:</strong> Woody, shrub-like stems, short thick leaves, and small toxic berries & flowers. Many varieties exist, but only 5 are considered invasive in the UK.</p>
+      <p><strong>How it spreads:</strong> Seed dispersal.</p>
+      <p><strong>Treatment:</strong> Persistent digging or systemic weed killer.</p>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.querySelector('.mobile-menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+  
+  if (toggleBtn && navMenu) {
+    toggleBtn.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      navMenu.classList.toggle('show');
+    });
+  }
+</script>
+</body>
+</html>

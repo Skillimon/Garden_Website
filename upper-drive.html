@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upper Drive - Montrose Garden</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <a class="site-title" href="index.html">Montrose Garden</a>
+        <p class="site-tag">Garden renovation & plant records</p>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="menu-icon">☰</span> Menu
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="upper-drive.html">Upper Drive</a></li>
+          <li><a href="lower-drive.html">Lower Drive</a></li>
+          <li><a href="swimming_pool.html">Swimming Pool</a></li>
+          <li><a href="kitchen-steps.html">Kitchen Courtyard</a></li>
+          <li><a href="container_plants.html">Container Plants</a></li>
+          <li><a href="top-lawn.html">Top Lawn</a></li>
+          <li><a href="weeds.html">Weeds</a></li>
+          <li><a href="invasive-plants.html">Invasive Plants</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+  <h1>Upper Drive</h1>
+  <a href="index.html">Back to Home</a>
+
+
+  <div class="plants">
+    <img src="Plants/pyracantha.jpg" alt="Pyracantha">
+    <div class="plant-text">
+      <h2>Pyracantha 'Orange Glow' </h2>
+      <p><strong>Nature: </strong>Pyracantha are evergreen shrubs or small trees, with spiny branches bearing simple leaves and corymbs of small white flowers followed by showy red, orange or yellow berries.</p>
+      <p><strong>Size: </strong></p>
+      <p><strong>Habitat: </strong>Easy to grow in fertile soil in sun or partial shade. Tolerant of pollution </p>
+      <p><strong>Prune: </strong>Prune in late winter or early spring. </p>
+    </div>
+  </div>
+
+  <div class="plants">
+    <img src="Plants/laurel.jpg" alt="Cherry Laurel">
+    <div class="plant-text">
+      <h2>Cherry Laurel (Prunus laurocerasus)</h2>
+      <p><strong>Nature: </strong>A vigorous, large, spreading evergreen shrub with handsome, glossy dark green leaves to 15cm in length.</p>
+      <p><strong>Size: </strong>4-8m</p>
+      <p><strong>Habitat: </strong>North–facing or South–facing or West–facing or East–facing</p>
+      <p><strong>Prune: </strong>Once established, most evergreen shrubs are fairly low maintenance and need little or no regular pruning. Pruning, when required, is generally carried out in mid to late spring.  </p>
+    </div>
+  </div>
+
+  <div class="plants">
+    <img src="Plants/blue-juniper.jpg" alt="Juniper?">
+    <div class="plant-text">
+      <h2>Juniper</h2>
+      <p><strong>Nature: </strong> evergreen tree.</p>
+      <p><strong>Size: </strong>4-8m</p>
+      <p><strong>Habitat: </strong>North–facing or South–facing or West–facing or East–facing</p>
+      <p><strong>Prune: </strong> </p>
+    </div>
+  </div>
+
+  <div class="plants">
+    <img src="Plants/hydrangea.jpg" alt="Hydrangea">
+    <div class="plant-text">
+      <h2>Hydrangea Petiolaris</h2>
+      <p><strong>Nature: </strong> Though slow growing to start with, it is a vigorous climber that can cover outbuildings or brighten up shady house walls.</p>
+      <p><strong>Size: </strong>4-8m</p>
+      <p><strong>Habitat: </strong>They will grow well in most soils provided they are reasonably moist and fertile. </p>
+      <p><strong>Prune: </strong>Climbing hydrangeas produce flowers on last year’s shoots. To ensure that the plant have enough time to develop flowering wood for the next year, prune in summer straight after flowering  </p>
+    </div>
+  </div>
+
+  <div class="plants">
+    <img src="Plants/juneberry.jpg" alt="Juneberry">
+    <div class="plant-text">
+      <h2>Juneberry</h2>
+      <p><strong>Nature: </strong> Though slow growing to start with, it is a vigorous climber that can cover outbuildings or brighten up shady house walls.</p>
+      <p><strong>Size: </strong>4-8m</p>
+      <p><strong>Habitat: </strong>They will grow well in most soils provided they are reasonably moist and fertile. </p>
+      <p><strong>Prune: </strong>  </p>
+    </div>
+  </div>
+
+  
+  <div class="plants">
+    <img src="Plants/white-willow.jpg" alt="White Willow">
+    <div class="plant-text">
+      <h2>White Willow (Salix Alba)</h2>
+      <p><strong>Nature: </strong>The white willow is the largest species of willow. </p>
+      <p><strong>Size: </strong>25m</p>
+      <p><strong>Habitat: </strong>Like most willows, the white willow is found growing in wet ground such as river and stream sides. </p>
+      <p><strong>Prune: </strong>  </p>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.querySelector('.mobile-menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+  
+  if (toggleBtn && navMenu) {
+    toggleBtn.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      navMenu.classList.toggle('show');
+    });
+  }
+</script>
+</body>
+</html>

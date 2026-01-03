@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Montrose Garden - Home</title>
+  <meta name="description" content="Tracking my garden renovation and plant collection at Montrose. Browse garden sections and view garden records." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <a class="site-title" href="index.php">Montrose Garden</a>
+        <p class="site-tag">Garden renovation & plant records</p>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="menu-icon">☰</span> Menu
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="upper_drive.html">Upper Drive</a></li>
+          <li><a href="lower_drive.html">Lower Drive</a></li>
+          <li><a href="swimming_pool.html">Swimming Pool</a></li>
+          <li><a href="kitchen_steps.html">Kitchen Courtyard</a></li>
+          <li><a href="container_plants.html">Container Plants</a></li>
+          <li><a href="top_lawn.html">Top Lawn</a></li>
+          <li><a href="expenses.php">Expenses</a></li>
+          <li><a href="summary.php">Summary</a></li>
+          <li><a href="weeds.html">Weeds</a></li>
+          <li><a href="invasive_plants.html">Invasive Plants</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Montrose Garden Project</h1>
+        <p class="intro">Documenting the renovation and development of my garden at Montrose. Track plant collections, monitor expenses, and reference garden sections.</p>
+        <div class="cta">
+          <a class="btn" href="container_plants.html">View Container Plants</a>
+          <a class="btn ghost" href="expenses.php">View Expenses</a>
+        </div>
+      </div>
+      <img src="montrose-1.jpg" alt="Montrose Garden" class="hero-image" loading="lazy" width="480" height="320">
+    </section>
+
+    <section class="featured">
+      <h2>Garden Sections</h2>
+      <div class="feature-grid">
+        <article class="feature">
+          <a href="upper_drive.html"><img src="montrose-1.jpg" alt="Upper Drive" loading="lazy"></a>
+          <h3><a href="upper_drive.html">Upper Drive</a></h3>
+          <p>Front garden area and driveway plantings.</p>
+        </article>
+
+        <article class="feature">
+          <a href="swimming_pool.html"><img src="montrose-1.jpg" alt="Swimming Pool Area" loading="lazy"></a>
+          <h3><a href="swimming_pool.html">Swimming Pool</a></h3>
+          <p>Pool area landscaping and surrounding plants.</p>
+        </article>
+
+        <article class="feature">
+          <a href="container_plants.html"><img src="montrose-1.jpg" alt="Container Plants" loading="lazy"></a>
+          <h3><a href="container_plants.html">Container Plants</a></h3>
+          <p>Potted plants and container gardens.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="latest">
+      <h2>Recent Updates</h2>
+      <ul class="latest-list">
+        <li>New container plants added to collection</li>
+        <li>Upper drive border renovations complete</li>
+        <li>Invasive species monitoring and removal ongoing</li>
+      </ul>
+    </section>
+
+    <section class="about">
+      <h2>About this site</h2>
+      <p>This site tracks the ongoing renovation and maintenance of my garden at Montrose. Use the navigation to browse different garden sections, view plant collections, or check expense records.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>&copy; 2026 Montrose Garden</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggleBtn = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        navMenu.classList.toggle('show');
+      });
+    }
+  </script>
+</body>
+</html>

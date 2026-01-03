@@ -1,0 +1,232 @@
+/* site.css – Modern, responsive layout for the garden site */
+:root{
+  --bg: #f6fbff;
+  --card:#ffffff;
+  --accent:#2b8a4e;
+  --muted:#6b7a86;
+  --text:#103048;
+  --radius:10px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;  
+  background: linear-gradient(180deg,var(--bg),#eef6ff);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:20px}
+
+header{padding:18px 0}
+.brand{display:flex;flex-direction:column}
+.brand .site-title{font-size:1.25rem;font-weight:700;color:var(--accent);text-decoration:none}  
+.brand .site-tag{margin:2px 0 0;font-size:0.9rem;color:var(--muted)}
+
+nav{margin-top:12px}
+nav ul{display:flex;gap:10px;list-style:none;padding:0;margin:0;flex-wrap:wrap}
+nav a{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--text);font-weight:600}
+nav a:hover,nav a:focus{background:var(--accent);color:#fff}
+
+/* Mobile menu toggle button */
+.mobile-menu-toggle{
+  display:none;
+  margin-top:12px;
+  padding:10px 16px;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  align-items:center;
+  gap:8px;
+}
+.mobile-menu-toggle .menu-icon{font-size:1.2rem}
+.mobile-menu-toggle:hover,.mobile-menu-toggle:focus{background:#237a40;outline:2px solid var(--accent);outline-offset:2px}
+
+/* Responsive nav */
+@media(max-width:720px){
+  .mobile-menu-toggle{display:flex}
+  nav{margin-top:8px}
+  nav ul{
+    display:none;
+    flex-direction:column;
+    gap:0;
+    background:var(--card);
+    border-radius:8px;
+    box-shadow:0 4px 12px rgba(16,48,72,0.1);
+    overflow:hidden;
+  }
+  nav ul.show{display:flex}
+  nav li{border-bottom:1px solid #eef3f8}
+  nav li:last-child{border-bottom:none}
+  nav a{display:block;padding:12px 16px;border-radius:0}
+}
+
+/* Main content */
+main{padding-bottom:40px}
+.intro{margin-bottom:12px;color:var(--muted)}
+section{margin:18px 0}
+
+/* Forms */
+label{display:block;margin-bottom:6px;color:var(--muted)}
+input[type="text"],input[type="number"],input[type="date"],select,input[type="search"],textarea{width:100%;padding:12px 16px;border:2px solid #e5e9ed;border-radius:8px;font-size:1rem;font-family:inherit;background:var(--card)}
+input[type="text"]:focus,input[type="number"]:focus,input[type="date"]:focus,select:focus,input[type="search"]:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(43,138,78,0.1)}
+input[type="submit"], .btn{background:var(--accent);color:#fff;padding:12px 24px;border:none;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-block;font-weight:600;transition:background 0.2s}
+input[type="submit"]:hover, .btn:hover{background:#237a40}
+
+.card{background:var(--card);padding:24px;border-radius:var(--radius);box-shadow:0 4px 12px rgba(16,48,72,0.06);margin-bottom:18px}
+
+/* Tables */
+.table-responsive{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 4px 12px rgba(16,48,72,0.06);overflow:auto}
+.table-responsive table{width:100%;min-width:600px;border-collapse:collapse}
+table{border-collapse:collapse;width:100%;background:var(--card);border-radius:6px;overflow:hidden}
+th,td{padding:10px;text-align:left;border-bottom:1px solid #eef3f8}
+.table-responsive th, .table-responsive td{padding:10px;text-align:left;border-bottom:1px solid #eef3f8}
+thead th{background:#f5f9ff;color:var(--accent);font-weight:700}
+.table-responsive th{background:#f5f9ff;color:var(--accent);font-weight:700}
+tbody tr:nth-child(even){background:#fbfcfd}
+.table-responsive tr:nth-child(even){background:#fbfdff}
+
+/* responsive columns for two-col */
+.two-col{display:flex;gap:20px;align-items:flex-start}
+.chart-wrap{flex:1}
+.two-col > div:first-child{flex:1}
+
+/* Hero image */
+.hero{display:flex;align-items:center;gap:18px;background:linear-gradient(180deg,rgba(255,255,255,0.7),transparent);padding:18px;border-radius:12px;margin-bottom:20px}
+.hero .hero-inner{flex:1}
+.hero-image{width:480px;height:320px;border-radius:8px;object-fit:cover;box-shadow:0 6px 18px rgba(16,48,72,0.12);}
+
+/* Featured sections */
+.featured{margin:30px 0}
+.featured h2{color:var(--accent);margin-bottom:20px}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}   
+.feature{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 12px rgba(16,48,72,0.06);transition:transform 0.2s,box-shadow 0.2s}
+.feature:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(16,48,72,0.12)}
+.feature img{width:100%;height:320px;object-fit:cover;display:block}
+.feature h3{margin:0;padding:12px 16px 8px;font-size:1.1rem}
+.feature h3 a{text-decoration:none;color:var(--text)}
+.feature h3 a:hover{color:var(--accent)}
+.feature p{margin:0;padding:0 16px 16px;color:var(--muted);font-size:0.9rem}
+
+/* About/Latest sections */
+.latest,.about{margin:30px 0;padding:24px;background:var(--card);border-radius:var(--radius);box-shadow:0 4px 12px rgba(16,48,72,0.06)}
+.latest h2,.about h2{margin-top:0;color:var(--accent)}
+.latest-list{margin:0;padding-left:20px;color:var(--text)}
+.latest-list li{margin-bottom:8px}
+.about p{line-height:1.6;color:var(--text)}
+.about a{color:var(--accent);text-decoration:none}
+.about a:hover{text-decoration:underline}
+
+/* CTA buttons */
+.cta{display:flex;gap:12px;margin-top:16px}
+.btn.ghost{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+.btn.ghost:hover,.btn.ghost:focus{background:var(--accent);color:#fff}
+
+/* Footer */
+.site-footer{font-size:0.9rem;color:var(--muted);padding:18px 0;border-top:1px solid #eef3f8;margin-top:24px}
+footer{font-size:0.9rem;color:var(--muted);padding:18px 0;border-top:1px solid #eef3f8;margin-top:24px;text-align:center}
+
+@media (max-width:800px){
+    .two-col{flex-direction:column}
+}
+
+@media(max-width:720px){
+  .hero{flex-direction:column;align-items:flex-start}
+  .hero-image{width:100%;height:240px}
+  .feature-grid{grid-template-columns:1fr}
+  .feature img{height:240px}
+  .cta{flex-direction:column}
+  .btn{text-align:center}
+}
+
+/* === NEW STYLES FOR INVASIVE PLANTS SECTION === */
+
+.invasive-plant {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.invasive-plant img {
+    width: 350px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.invasive-plant .plant-text {
+    max-width: 700px;
+}
+
+.invasive-plant h2 {
+    margin-top: 0;
+}
+
+
+/* === NEW STYLES FOR WEED SECTION === */
+
+.weeds {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.weeds img {
+    width: 350px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.weeds .plant-text {
+    max-width: 700px;
+}
+
+.weeds h2 {
+    margin-top: 0;
+}
+
+
+/* === NEW STYLES FOR PLANTS SECTION === */
+
+.plants {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.plants img {
+    width: 350px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.plants .plant-text {
+    max-width: 700px;
+}
+
+.plants h2 {
+    margin-top: 0;
+}

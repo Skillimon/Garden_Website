@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lower Drive and Shed - Montrose Garden</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <a class="site-title" href="index.html">Montrose Garden</a>
+        <p class="site-tag">Garden renovation & plant records</p>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="menu-icon">☰</span> Menu
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="upper_drive.html">Upper Drive</a></li>
+          <li><a href="lower_drive.html">Lower Drive</a></li>
+          <li><a href="swimming_pool.html">Swimming Pool</a></li>
+          <li><a href="kitchen_steps.html">Kitchen Courtyard</a></li>
+          <li><a href="container_plants.html">Container Plants</a></li>
+          <li><a href="top_lawn.html">Top Lawn</a></li>
+          <li><a href="weeds.html">Weeds</a></li>
+          <li><a href="invasive_plants.html">Invasive Plants</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+  <h1>Lower Drive and Shed</h1>
+  <a href="index.html">Back to Home</a>
+
+
+  <div class="plants">
+    <img src="Plants/berberis.jpg" alt="Berberis">
+    <div class="plant-text">
+      <h2>Berberis Bealei (or is it Mahonia??) </h2>
+      <p><strong>Nature:</strong>Berberis are versatile ornamental shrubs, adding colourful foliage, flowers and berries to borders, rock gardens and containers.</p>
+      <p><strong>Size:</strong></p>
+      <p><strong>Habitat:</strong> </p>
+      <p><strong>Prune:</strong>Can be pruned to keep them in shape and respond well to hard pruning</p>
+    </div>
+  </div>
+
+  <div class="plants">
+    <img src="Plants/tree-peony.jpg" alt="Tree Peony">
+    <div class="plant-text">
+      <h2>Paeonia Lutea (Tree Peony) </h2>
+      <p><strong>Nature:</strong>Herbaceous flower, Deciduous, Flowering</p>
+      <p><strong>Size:</strong>1.5-2.5m</p>
+      <p><strong>Habitat:</strong>Grow in a well-drained, humus-rich soil in sun or partial shade.  </p>
+      <p><strong>Prune:</strong>No routine pruning necessary. Remove diseased, damaged, congested or crossing shoots. Shoots that are growing in unwanted directions can also be pruned out. </p>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.querySelector('.mobile-menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+  
+  if (toggleBtn && navMenu) {
+    toggleBtn.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      navMenu.classList.toggle('show');
+    });
+  }
+</script>
+</body>
+</html>
